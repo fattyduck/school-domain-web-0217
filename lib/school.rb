@@ -20,8 +20,8 @@ class School
   end
 
   def sort
-    @roster.sort
-    @roster.each_key {|k| @roster[k].sort!}
+    @roster.map {|k, v| v.sort!}
+    @roster.sort.to_h
   end
 
 
